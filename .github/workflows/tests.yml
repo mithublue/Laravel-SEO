@@ -24,6 +24,7 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           tools: composer:${{ matrix.php == '7.1' && 'v2.2' || 'v2' }}
+          coverage: none
 
       - name: Install dependencies
         run: composer update --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist --${{ matrix.composer-dependency }}
